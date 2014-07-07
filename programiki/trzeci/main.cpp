@@ -1,29 +1,31 @@
 //CASIO
 #include <iostream>
-#include <stdio.h>
 
 using namespace std;
 
 int main()
 {
     cout << "Witojcie w kalkulatorze, jakiego Swiat nie widzial!" << endl;
-    cout << "<nacisnij dowolny klawisz>";
-    getchar();
+    cout << "<nacisnij ENTER>";
+    cin.get();
     char znak='a';
     int a, b, wynik;
     //menu
-    if (znak!='q')
+    while (znak!='q')
     {
         cout << string(50, '\n');
-        cout << "Wprowadz zank dzialania oraz dwie liczby" << endl;
-        cout << "+-*/" << endl;
-        cout << "aby zakonczyc, nacisnij 'q'" << endl;
-        scanf("%c %d %d", &znak, &a, &b);
+        cout << "Wprowadz zank dzialania oraz dwie liczby\n" << endl;
+        cout << "Wynik to:\n", cout <<wynik;
+        cout << "\nAby zakonczyc, nacisnij 'q'.. i dwie liczby.. :)" << endl;
+        cin >> znak >> a >> b;
         switch(znak)
         {
-        case 'q': cout << "Konczymy, dziekuje za uwage";
+            case 'q': cout << "Konczymy, dziekuje za uwage"; break;
+            case '+': wynik=a+b; cout << "Wynik to:", cout <<wynik; break;
+            case '-': wynik=a-b; cout << "Wynik to:", cout <<wynik; break;
+            case '/': wynik=a/b; cout << "Wynik to:", cout <<wynik; break;
+            case '*': wynik=a*b; cout << "Wynik to:", cout <<wynik; break;
         }
-        cout << "Wynik to:", cout <<wynik;
     }
     return 0;
 }
