@@ -40,6 +40,7 @@
 //    return 0;
 //}
 
+
 ////wielka suma extended
 //
 //#include <iostream>
@@ -65,6 +66,7 @@
 //}
 
 //wielka suma ultimate
+//wielka suma extended
 
 #include <iostream>
 
