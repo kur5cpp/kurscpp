@@ -184,10 +184,10 @@ int main()
 {
     int x, s, g;
     cin>>x;
-    for(int i=0; x>i; i++) //rzedy
+    for(int i=1; x+1>i; i++) //rzedy
         {
         for(int s=x-i; s!=0; s--, cout<<"a");
-        for(g=i; g<=x; g+2, cout<<"*");
+        for(g=2*i-1; g>0 ;g-- , cout<<"b");
         for(int s=x-i; s!=0; s--, cout<<"a");
         cout<<endl;
         };
