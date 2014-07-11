@@ -102,6 +102,107 @@
 
 //sortowanie przez zliczanie
 
+//#include <iostream>
+//#include <stdlib.h>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    int tab[100];
+//    int tabk[11] = {0};
+//    srand(time(NULL));
+//    for(int i=0; i<100; i++)
+//        tab[i]=rand()%11;
+//    for(int k=0; k<11; k++)
+//        for(int i=0; i<100; i++)
+//            if (tab[i]==k)
+//                tabk[k]++;
+//    for(int k=0; k<11; k++)
+//        cout<<tabk[k]<<"\t"<<k<<endl;
+//    for(int i=0; i<11; i++)
+//        for(int j=0; j<tabk[i]; j++) cout<<i;
+//    return 0;
+//}
+////for(int i=0; i<20; i++)tab2[tab[i]]++; bardziej elegancko!!!
+
+
+//TABLICE WIELOWYMIAROWE
+
+//#include <iostream>
+//#include <stdlib.h>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    int tab[5][10];
+//    srand(time(NULL));
+//    for(int i=0; i<5; i++)
+//        for(int k=0; k<10; k++)
+//            tab[i][k]=rand()%11;
+//    for(int i=0; i<5; i++)
+//        {
+//        for(int k=0; k<10; k++)
+//            cout<<tab[i][k]<<" ";
+//        cout<<endl;
+//        }
+//    return 0;
+//}
+
+////tab mnozenia
+//
+//#include <iostream>
+//#include <stdlib.h>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    int tab[10][10];
+//    for(int i=0; i<10; i++)
+//        for(int k=0; k<10; k++)
+//            tab[i][k]=(i+1)*(k+1);
+//    for(int i=0; i<10; i++)
+//    {
+//        for(int k=0; k<10; k++)
+//        {
+//            cout.width(4);
+//            cout<<tab[i][k];
+//        }
+//        cout<<endl;
+//    }
+//    return 0;
+//}
+
+////tab zakres -100 100
+//
+//#include <iostream>
+//#include <stdlib.h>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    srand(time(NULL));
+//    int tab[10][10];
+//    for(int i=0; i<10; i++)
+//        for(int k=0; k<10; k++)
+//            tab[i][k]=rand()%201-100;
+//    for(int i=0; i<10; i++)
+//    {
+//        for(int k=0; k<10; k++)
+//        {
+//            cout.width(4);
+//            cout<<tab[i][k];
+//        }
+//        cout<<endl;
+//    }
+//    return 0;
+//}
+
+
+//n-ty wiersz, kolumna, przekatna;
 #include <iostream>
 #include <stdlib.h>
 
@@ -109,24 +210,42 @@ using namespace std;
 
 int main()
 {
-    int tab[100];
-    int tabk[11] = {0};
+    int n=0;
     srand(time(NULL));
-    for(int i=0; i<100; i++)
-        tab[i]=rand()%11;
-    for(int k=0; k<11; k++)
-        for(int i=0; i<100; i++)
-            if (tab[i]==k)
-                tabk[k]++;
-    for(int k=0; k<11; k++)
-        cout<<tabk[k]<<"\t"<<k<<endl;
-    for(int i=0; i<11; i++)
-        for(int j=0; j<tabk[i]; j++) cout<<i;
-    return 0;
+    int tab[10][10], trans[10][10];
+    for(int i=0; i<10; i++)
+        for(int k=0; k<10; k++)
+            tab[i][k]=rand()%201-100;
+//
+    cin>>n;
+    for(int i=0; i<10; i++)
+    {
+        for(int k=0; k<10; k++)
+        {
+            cout.width(4);
+            cout<<tab[i][k];
+        }
+        cout<<endl;
+    }
+////wiersz
+//    for(int i=0; i<10; i++)
+//        cout<<tab[n][i];
+////kolumna
+//    for(int i=0; i<10; i++)
+//        cout<<tab[i][n];
+////przekatna
+//    for(int i=0; i<10; i++)
+//        cout<<tab[i][i];
+//    return 0;
+//transpozycja
+    for(int i=0; i<10; i++)
+    {
+        for(int k=0; k<10; k++)
+        {
+            trans[i][k]=tab[k][i];
+            cout.width(4);
+            cout<<trans[i][k];
+        }
+        cout<<endl;
+    }
 }
-
-
-//for(int i=0; i<20; i++)tab2[tab[i]]++; bardziej elegancko!!!
-
-
-
