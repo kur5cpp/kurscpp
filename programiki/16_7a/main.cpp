@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "funkc1.h"
 #include "funkc2.h"
+#include "menu.h"
+#include "prostefunkcje.h"
 
 using namespace std;
 
@@ -9,12 +11,15 @@ using namespace std;
 int main()
 {
     int n=wprow_dan();
-    int **A=tabliczka_mnizenia(n);
-    wyswietl(A, n);
-    free_tab((void **)A);
-    cin.clear();
-    cin.ignore();
-    cin.get();
+    licznzik(n);
+    cout << "fdsafas";
+    licznzik(10);
+    cout << "fdsaffdasfdasas";
+    licznzik(15);
+   // int **A=tabliczka_mnizenia(n);
+   // menu();
+   // wyswietl(A, n);
+   // free_tab((void **)A);
 }
 
 ////////////////////////////////////////////
