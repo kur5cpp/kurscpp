@@ -4,18 +4,20 @@
 #include "funkc2.h"
 #include "menu.h"
 #include "prostefunkcje.h"
+#include "18_7_1.h"
 
 using namespace std;
 
 
 int main()
 {
-    int n=wprow_dan();
-    licznzik(n);
-    cout << "fdsafas";
-    licznzik(10);
-    cout << "fdsaffdasfdasas";
-    licznzik(15);
+  //  int n=wprow_dan();
+    wyrazenia();
+//    licznzik(n);
+//    cout << "fdsafas";
+//    licznzik(10);
+//    cout << "fdsaffdasfdasas";
+//    licznzik(15);
    // int **A=tabliczka_mnizenia(n);
    // menu();
    // wyswietl(A, n);
