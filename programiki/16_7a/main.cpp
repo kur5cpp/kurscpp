@@ -5,14 +5,18 @@
 #include "menu.h"
 #include "prostefunkcje.h"
 #include "18_7_1.h"
+#include "struktury.h"
 
 using namespace std;
 
 
 int main()
 {
-  //  int n=wprow_dan();
-    wyrazenia();
+//    struc_1();
+//    struc_2_pointers();
+    allowance_list();
+//  int n=wprow_dan();
+//    wyrazenia();
 //    licznzik(n);
 //    cout << "fdsafas";
 //    licznzik(10);
