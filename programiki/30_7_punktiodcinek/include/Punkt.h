@@ -10,12 +10,16 @@ class Punkt
 {
     public:
         Punkt();
-        int x, y;
+        Punkt(Punkt &obiekt1);
+        int x, y, numer;
         virtual ~Punkt();
         void wyswietl();
         float odleglosc();
+        static void info_o_klasie();
     protected:
     private:
+        static int licznik;
+
 };
 
 #endif // PUNKT_H
