@@ -20,7 +20,7 @@ void Ulamek2::ustaw_wartosci(int x, int y)
     mianownik=y;
 }
 
-void Ulamek2::wyswietl_ulamek(int licznik, int mianownik)
+void Ulamek2::wyswietl_ulamek()
 {
     cout<<licznik<<"\n_\n"<<mianownik<<endl;
 }
@@ -37,5 +37,5 @@ void Ulamek2::dodaj_ulamek(int li, int mi)
     licznik=temp;
     mianownik*=mi;
     cout<<"wynik dodawania:\n";
-    wyswietl_ulamek(licznik, mianownik);
+    wyswietl_ulamek();
 }

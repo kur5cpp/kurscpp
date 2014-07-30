@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Ulamek2.h"
+#include <stdlib.h>
 
 using namespace std;
 
@@ -54,9 +55,19 @@ using namespace std;
 
 int main()
 {
-    Ulamek2 nowa;
-    nowa.ustaw_wartosci(3, 4);
-    nowa.dodaj_ulamek(3, 4);
+    srand(time(NULL));
+
+    Ulamek2 tablica_ulamkow[10];
+//    Ulamek2 *tablica_ulamkow=ptablica_ulamkow;
+    for(int i=0; i<10; i++)
+    {
+        tablica_ulamkow[i].licznik=rand()%21-10;
+        zerocheck:
+        tablica_ulamkow[i].mianownik=rand()%21-10;
+        if(!tablica_ulamkow[i].mianownik) goto zerocheck;
+    }
+    for(int i=0; i<10; i++)
+        tablica_ulamkow[i].wyswietl_ulamek();
 //    Zwierze piesio;
 //    piesio.imie="Reksio";
 //    piesio.kolor='Szarobury';
