@@ -17,6 +17,18 @@ class Zespolona
         float u, r;
         void wyswietl();
         float modul();
+        Zespolona dodaj(Zespolona &dodaj, Zespolona &dodaj2);
+        Zespolona pomnoz(Zespolona &pomnoz1, Zespolona &pomnoz2);
+
+        //operatory
+        friend Zespolona operator+(Zespolona dodaj, Zespolona dodaj2);
+        friend Zespolona operator*(Zespolona pomnoz1, Zespolona pomnoz2);
+        friend Zespolona operator+=(Zespolona &lewa, Zespolona &prawa);
+        friend Zespolona operator*=(Zespolona lewa, Zespolona prawa);
+        friend Zespolona operator++(Zespolona wejscie);
+        friend bool operator==(Zespolona lewa, Zespolona prawa);
+        friend bool operator!(Zespolona wejscie);
+//        friend bool operator bool(Zespolona wejscie);
     protected:
     private:
 };
