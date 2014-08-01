@@ -24,12 +24,19 @@ int main()
 //    czwarta.wyswietl();
 
     Zespolona jedna(3, 4);
-    Zespolona druga(3, 4);
-    jedna+=druga;
+    Zespolona druga(2, 3);
     Zespolona trzecia;
-    trzecia=jedna+druga;
-    jedna.wyswietl();
+//    Zespolona druga(3, 4);
+//    jedna+=druga;
+//    Zespolona trzecia;
+//    trzecia=jedna+druga;
+//    jedna.wyswietl();
+//    trzecia.wyswietl();
+    trzecia=++jedna+druga;
     trzecia.wyswietl();
-
+    Zespolona czwarta;
+    czwarta=druga++;
+    czwarta.wyswietl();
+    druga.wyswietl();
     return 0;
 }

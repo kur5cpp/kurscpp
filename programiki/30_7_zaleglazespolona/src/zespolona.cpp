@@ -84,15 +84,15 @@ Zespolona operator*=(Zespolona &lewa, Zespolona &prawa)
     return lewa;
 }
 
-Zespolona operator++(Zespolona wejscie)
-{
-    wejscie.r++;
-    return wejscie;
-}
+//Zespolona operator++(Zespolona wejscie)
+//{
+//    wejscie.r++;
+//    return wejscie;
+//}
 
 bool operator==(Zespolona lewa, Zespolona prawa)
 {
-    if(lewa.u==prawa.u&&lewa.r==prawa.r)
+    if(lewa.u==prawa.u&&lewa.r==prawa.r)//returnn
         return 1;
     else return 0;
 }
@@ -103,5 +103,3 @@ bool operator!(Zespolona wejscie)
     else return 0;
 }
 
-//bool operator bool(Zespolona wejscie)
-//{}

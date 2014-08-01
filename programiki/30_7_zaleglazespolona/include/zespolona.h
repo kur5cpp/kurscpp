@@ -25,10 +25,26 @@ class Zespolona
         friend Zespolona operator*(Zespolona pomnoz1, Zespolona pomnoz2);
         friend Zespolona operator+=(Zespolona &lewa, Zespolona &prawa);
         friend Zespolona operator*=(Zespolona lewa, Zespolona prawa);
-        friend Zespolona operator++(Zespolona wejscie);
+//        friend Zespolona operator++(Zespolona wejscie);
         friend bool operator==(Zespolona lewa, Zespolona prawa);
         friend bool operator!(Zespolona wejscie);
-//        friend bool operator bool(Zespolona wejscie);
+        Zespolona & operator++() //++a
+        {
+            ++r;
+            return *this;
+        }
+
+        Zespolona operator++(int)//a++
+        {
+            Zespolona temp = (*this);
+            ++r;
+            return temp;
+        }
+
+        operator bool()
+        {
+            return(r);
+        }
     protected:
     private:
 };
