@@ -90,12 +90,12 @@ Zespolona operator*=(Zespolona &lewa, Zespolona &prawa)
 //    return wejscie;
 //}
 
-bool operator==(Zespolona lewa, Zespolona prawa)
-{
-    if(lewa.u==prawa.u&&lewa.r==prawa.r)//returnn
-        return 1;
-    else return 0;
-}
+//bool operator==(Zespolona lewa, Zespolona prawa)
+//{
+//    if(lewa.u==prawa.u&&lewa.r==prawa.r)//returnn
+//        return 1;
+//    else return 0;
+//}
 
 bool operator!(Zespolona wejscie)
 {

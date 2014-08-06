@@ -11,11 +11,13 @@ using namespace std;
 class Diary
 {
     public:
-        Teacher teach;
-        Pupil pupils[2];
+        int N=0;
+        Teacher teach1;
+        Pupil pupils1[3];
         Diary();
-        Diary(Teacher teach, Pupil pupils[2]);
+        Diary(Teacher teach1, Pupil pupils1[3]);
         virtual ~Diary();
+        void fill_diary(int N);
         void print_diary();
     protected:
     private:

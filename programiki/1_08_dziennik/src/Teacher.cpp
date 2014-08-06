@@ -19,5 +19,5 @@ Teacher::Teacher(string a, int b, string c, string d):Person(a, b)
 void Teacher::print_tea()
 {
     print_person();
-    cout<<subj<<sala;
+    cout<<"\t"<<subj<<"\t"<<sala;
 }

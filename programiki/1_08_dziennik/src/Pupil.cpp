@@ -18,5 +18,5 @@ Pupil::Pupil(string a, int b, int c):Person(a, b)
 void Pupil::print_pupa()
 {
     print_person();
-    cout<<wstat_no;
+    cout<<"\t"<<wstat_no;
 }

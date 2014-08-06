@@ -26,7 +26,7 @@ class Zespolona
         friend Zespolona operator+=(Zespolona &lewa, Zespolona &prawa);
         friend Zespolona operator*=(Zespolona lewa, Zespolona prawa);
 //        friend Zespolona operator++(Zespolona wejscie);
-        friend bool operator==(Zespolona lewa, Zespolona prawa);
+//        friend bool operator==(Zespolona lewa, Zespolona prawa);
         friend bool operator!(Zespolona wejscie);
         Zespolona & operator++() //++a
         {

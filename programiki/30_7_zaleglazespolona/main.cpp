@@ -4,6 +4,7 @@
 
 using namespace std;
 
+
 int main()
 {
     srand(time(NULL));
@@ -32,11 +33,15 @@ int main()
 //    trzecia=jedna+druga;
 //    jedna.wyswietl();
 //    trzecia.wyswietl();
+
+
+
     trzecia=++jedna+druga;
     trzecia.wyswietl();
     Zespolona czwarta;
     czwarta=druga++;
     czwarta.wyswietl();
     druga.wyswietl();
+    druga==czwarta;
     return 0;
 }

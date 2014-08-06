@@ -13,7 +13,7 @@ class Person
         Person(string a, int b);
         virtual ~Person();
         string person_name;
-        string person_abs;
+        bool person_abs[31];
         int person_age;
         void print_person();
     protected:

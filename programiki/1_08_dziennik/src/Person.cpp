@@ -18,5 +18,7 @@ Person::~Person()
 
 void Person::print_person()
 {
-    cout<<person_name<<"\t"<<person_age<<"\t"<<person_abs;
+    cout<<person_name<<"\t"<<person_age<<"\t";
+    for(int i=0; i<31; i++)
+        cout<<person_abs[i];
 }
