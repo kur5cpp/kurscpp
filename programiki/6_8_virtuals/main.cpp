@@ -14,8 +14,13 @@ int main()
 {
     Zwierz Z;
     Kaczka kwa;
-    zrob_glos(kwa);
-    zrob_glos(Z);
+    Zwierz *wsk_z;
+    Kaczka *wks_k;
+    wsk_z = &kwa;
 
+    wks_k=dynamic_cast<Kaczka*>(wsk_z);
+
+    wks_k->daj_glos();
+    wsk_z->daj_glos();
     return 0;
 }
