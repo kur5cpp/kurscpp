@@ -3,6 +3,10 @@
 #include <A.h>
 #include <cstdlib>
 
+struct S{
+  char a;
+  int s;
+};
 
 using namespace std;
 
@@ -17,9 +21,12 @@ int main()
     for (int i=0; i<wekt.size()-1; i++){
         cout<<wekt[i]<<"\t";
     }
+    A ass(1);
+    cout<<sizeof(ass);
+        S asss;
+        cout<<sizeof(asss);
 
 
-    for ()
     cout << "Hello world!" << endl;
     return 0;
 }
