@@ -75,24 +75,25 @@ class Zoo
         int inventory_mass;
         vector <Animal> inventory;
 
-        void spontaneous_procreation()
-        {
-                switch(){
-                case 1 :
-                case 2 :
-                case 3 :
-                case 4 :
-                }
-        }
+//        void spontaneous_procreation()
+//        {
+//                switch(rand()%4){
+//                case 1 : inventory.push_back(Forfitter);
+//                case 2 : inventory.push_back(Gnu);
+//                case 3 : inventory.push_back(Zebra);
+//                case 4 : inventory.push_back(Koza);
+//                }
+//
+//        }
 
         void show_us_the_inventory()
         {
-                int inv_count=inventory.size();
-                for ( int i=0; i<inv_count; ++i){
-                        cout<<inventory.at(i).specimen<<" ";
-                        cout<<inventory.at(i).ani_mass<<" ";
-                        inventory.at(i).make_noise();
-                }
+//                int inv_count=inventory.size();
+//                for ( int i=0; i<inv_count; ++i){
+//                        cout<<inventory.at(i).specimen<<" ";
+//                        cout<<inventory.at(i).ani_mass<<" ";
+//                        inventory.at(i).make_noise();
+//                }
         }
 };
 

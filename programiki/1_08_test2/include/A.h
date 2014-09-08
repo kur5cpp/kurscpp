@@ -26,4 +26,12 @@ class A {
     int x;
 };
 
+//class v_A{
+//  public:
+//        v_A(int x)
+//        {
+//                ptr=new A(x)
+//        }
+//        ~v_A
+//}
 #endif // A_H
