@@ -40,26 +40,26 @@ private:
 };
 
 template <class Type>
-class IntSharedPtr
+class SharedPtr
 {
 public:
-    IntSharedPtr()
+    SharedPtr()
     : _referenceCounter(0)
     {
     }
 
-    IntSharedPtr(Type *x)
+    SharedPtr(Type *x)
     : _referenceCounter(new ReferenceCounter(x))
     {
     }
 
-    IntSharedPtr(const IntSharedPtr &other)
+    SharedPtr(const SharedPtr &other)
     : _referenceCounter(other._referenceCounter)
     {
         _referenceCounter->increase();
     }
 
-    ~IntSharedPtr()
+    ~SharedPtr()
     {
         _referenceCounter->decrease();
         releaseIfNeeded();
@@ -76,7 +76,7 @@ public:
         return _referenceCounter->counter();
     }
 
-    void operator=(IntSharedPtr &other)
+    void operator=(SharedPtr &other)
     {
         if( _referenceCounter != 0 )
         {
@@ -143,10 +143,10 @@ int main()
 //        IntPtr ptr2 = ptr;
 //    }
     {
-        IntSharedPtr <int> ptr1(new int(8));
+        SharedPtr <int> ptr1(new int(8));
         std::cout << "counter=" << ptr1.counter() << "\n";
        {
-            IntSharedPtr <int> ptr2 = ptr1;
+            SharedPtr <int> ptr2 = ptr1;
             std::cout << "Ptr=" << (ptr1.get() == ptr2.get()) << "\n";
             std::cout << "counter=" << ptr1.counter() << "\n";
             std::cout << "counter=" << ptr2.counter() << "\n";
@@ -157,10 +157,10 @@ int main()
     }
     std::cout << "----------------------------\n";
     {
-        IntSharedPtr <int> ptr1(new int(1));
+        SharedPtr <int> ptr1(new int(1));
         std::cout << "counter=" << ptr1.counter() << "\n";
         {
-            IntSharedPtr <int> ptr2 (new int(2));
+            SharedPtr <int> ptr2 (new int(2));
             ptr2 = ptr1;
             std::cout << "Ptr=" << (ptr1.get() == ptr2.get()) << "\n";
             std::cout << "counter=" << ptr1.counter() << "\n";
